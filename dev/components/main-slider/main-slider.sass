@@ -1,0 +1,45 @@
+.main-slider
+  position: relative
+  &__slider
+    height: 500px
+    .slick-list,
+    .slick-track
+      height: 100%
+    &-item
+      height: 100%
+      outline: none
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+  &__nav
+    position: absolute
+    top: 50%
+    background: rgba($c_black, 0.8)
+    width: 40px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    color: $c_white
+    transform: translateY(-50%)
+    cursor: pointer
+    &--prev
+      left: 15px
+    &--next
+      right: 15px
+
+  &__box
+    position: absolute
+    top: 50%
+    right: 10%
+    max-width: 500px
+    padding: 30px
+    background: rgba($c_black, 0.8)
+    transform: translate(0, -50%)
+    color: $c_white
+    font-size: 20px
+    border-radius: 10px

@@ -1,0 +1,58 @@
+b, strong
+  font-weight: 700
+
+html
+  font-size: $f_fz_def
+  line-height: $f_lh_def
+  font-family: $f_ff_def
+  height: 100vh
+  color: $c_text
+
+body
+  position: relative
+  min-width: 320px
+  height: 100vh
+  overflow-x: hidden
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input[type="number"]
+  -moz-appearance: textfield
+
+input[type="number"]:hover,
+input[type="number"]:focus
+  -moz-appearance: number-input
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.hidden
+  display: none !important
+
+// /* width */
+// *::-webkit-scrollbar
+//   width: 3px
+//   height: 3px
+// /* Track */
+// *::-webkit-scrollbar-track
+//   background: rgba($c_grey-dark, 0)
+// /* Handle */
+// *::-webkit-scrollbar-thumb
+//   background: $c_grey-light
+// /* Handle on hover */
+// *::-webkit-scrollbar-thumb:hover
+//   background: #555
+

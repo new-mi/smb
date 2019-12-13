@@ -1,0 +1,32 @@
+.requisites
+  max-width: 100%
+  width: 1024px
+  margin: 0 auto
+  &__title
+    font-size: 20px
+    font-weight: bold
+    text-align: center
+    margin: 15px 0
+    &:first-child
+      margin-top: 0
+  &__block
+    margin: 15px 0
+    &:last-child
+      margin-bottom: 0
+    .row
+      display: flex
+      &:first-child
+        .col
+          border-top: 1px solid $c_grey
+      .col
+        flex-shrink: 0
+        border: 1px solid $c_grey
+        border-top: none
+        padding: 10px 15px
+        background: $c_white
+        &:first-child
+          font-weight: bold
+          width: 40%
+          border-right-color: transparent
+        &:nth-child(2)
+          width: 60%

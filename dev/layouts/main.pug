@@ -1,0 +1,32 @@
+block variables
+
+include ../components/index
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible' content="IE = edge")
+    <![endif]-->
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="keywords" content="")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
+    link(rel="stylesheet" type='text/css' href="assets/css/libs.min.css")
+    link(rel="stylesheet" type='text/css' href="assets/css/styles.css")
+    link(rel="stylesheet" type='text/css' href="assets/css/custom.css")
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+    <![endif]-->
+  body(class=pageClass)
+    .wrapper
+      include ../components/header/header
+      .content
+        block content
+      include ../components/footer/footer
+    script(src="assets/js/libs.min.js" defer)
+    script(src="assets/js/main.js" defer)
+    script(src="assets/js/custom.js")
+    block script

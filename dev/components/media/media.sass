@@ -1,0 +1,36 @@
+@media (min-width: 992px)
+  .link
+    transition: $trans
+    &:hover
+      color: $c_accent
+      text-decoration: none
+  .social
+    &__item
+      transition: $trans
+      &:hover
+        opacity: 0.4
+  .btn
+    transition: $trans
+    &--accent
+      &:hover
+        background: $c_accent-active
+        border-color: rgba($c_accent-active,.1)
+    &--accent-2
+      &:hover
+        background: rgba($c_accent-2, 0.8)
+        border-color: rgba($c_accent-2,.1)
+
+  .products
+    &__nav
+      &-item
+        transition: $trans
+        &:hover
+          .layout
+            background: rgba($c_black, 0.2)
+
+  .partners
+    &__slider
+      &-item
+        transition: $trans
+        &:hover
+          filter: grayscale(0)

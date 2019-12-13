@@ -1,0 +1,50 @@
+.special-offers
+  &__slider-wrap
+    position: relative
+    padding: 0 60px
+
+  .slick-slide
+    margin: 0 10px
+  .slick-list
+    margin: 0 -10px
+
+  &__slider
+    &-item
+      padding: 15px
+      border: 1px solid rgba($c_text, 0.2)
+      border-radius: 3px
+      outline: none
+      .e-img
+        width: calc(100% + 30px)
+        height: 160px
+        margin: -15px -15px 15px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
+      .e-text
+        text-align: center
+        margin-bottom: 15px
+        font-size: 14px
+      .btn
+        width: 100%
+
+
+  &__nav
+    position: absolute
+    top: 50%
+    background: rgba($c_black, 0.8)
+    width: 40px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    color: $c_white
+    transform: translateY(-50%)
+    cursor: pointer
+    &--prev
+      left: 10px
+    &--next
+      right: 10px
