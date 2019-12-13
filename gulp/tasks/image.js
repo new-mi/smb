@@ -4,7 +4,7 @@ let imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     imgPATH = {
         "input": "./dev/assets/images/**/*.{png,jpg,gif,svg}",
-        "ouput": "./build/assets/images/"
+        "ouput": "./docs/assets/images/"
     };
 
 module.exports = function () {

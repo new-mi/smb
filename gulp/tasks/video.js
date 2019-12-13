@@ -1,6 +1,6 @@
 let videoPATH = {
         "input": "./dev/assets/video/*.{mp4, webm}",
-        "ouput": "./build/assets/video/"
+        "ouput": "./docs/assets/video/"
     };
 
 module.exports = function () {

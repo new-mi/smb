@@ -24,7 +24,7 @@ module.exports = function () {
             .pipe(plumber.stop())
             .pipe(rename({dirname: ""}))
             .pipe(prettify())
-            .pipe($.gulp.dest('./build/'))
+            .pipe($.gulp.dest('./docs/'))
             .on('end', $.browserSync.reload);
     });
 };

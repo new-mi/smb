@@ -9,7 +9,7 @@ let plumber = require('gulp-plumber'),
     stylesPATH = {
         "input": "./dev/styles/",
         "inputLIBS": "./dev/libs/**/",
-        "ouput": "./build/assets/css/"
+        "ouput": "./docs/assets/css/"
     };
 
 module.exports = function () {

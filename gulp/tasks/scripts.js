@@ -3,7 +3,7 @@ let uglify = require('gulp-uglify'),
     scriptsPATH = {
         "inputLIBS": "./dev/libs/**/",
         "inputJS": "./dev/js/",
-        "ouput": "./build/assets/js/"
+        "ouput": "./docs/assets/js/"
     };
 
 module.exports = function () {
