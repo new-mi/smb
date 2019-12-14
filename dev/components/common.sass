@@ -12,12 +12,17 @@ body
   position: relative
   min-width: 320px
   height: 100vh
-  overflow-x: hidden
+  overflow: hidden
+  background: url("https://oformi.net/uploads/gallery/main/11/summer-again.jpg") center top no-repeat
+  background-size: cover
+  transition: $trans
 
 .wrapper
   display: flex
   flex-direction: column
   height: 100%
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
 
 .content
   flex: 1 0 auto

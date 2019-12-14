@@ -23,6 +23,36 @@ _w.onload = init();
 
 function init() {
 
+// BODY MARGIN TOP
+_b.style.paddingTop = $('.header')[0].offsetHeight + 'px'
+// BODY MARGIN TOP end
+
+// HEADER SCROLLING
+let currentScroll = 0,
+    hTop = $('.header__wrap--top')[0].offsetHeight,
+    header = $(".header");
+
+if (_width > 992) {
+  $('.wrapper').on('scroll', handlerStickyHeader);
+}
+
+function handlerStickyHeader(e) {
+  let scroll = $(this).scrollTop();
+
+  if (currentScroll > hTop) {
+    header.css('transform', `translateY(-${hTop}px)`)
+    _b.style.paddingTop = $('.header')[0].offsetHeight - hTop + 'px'
+  }
+  else {
+    header.css('transform', `translateY(0px)`)
+    _b.style.paddingTop = $('.header')[0].offsetHeight + 'px'
+  }
+
+  currentScroll = scroll;  //Updates current scroll position
+}
+
+// HEADER SCROLLING end
+
 // MAIN SLIDER
 const mainSlider = $('.js-main-slider');
 
