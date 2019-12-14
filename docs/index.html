@@ -19,7 +19,7 @@
       <header class="header">
         <div class="header__inner header__inner--top">
           <div class="container">
-            <div class="header__wrap header__wrap--top">
+            <div class="header__wrap header__wrap">
               <div class="header__social social"><a class="social__item social__item--whatsup" href=""><i class="fab fa-whatsapp"></i></a></div>
               <div class="header__contacts"><a class="link header__mail" href="mailto:smb_67@mail.ru">smb_67@mail.ru</a><a class="link header__phone" href="tel:+79269409939">+7 (926) 940-99-39</a></div>
             </div>
@@ -27,11 +27,11 @@
         </div>
         <div class="header__inner header__inner--bottom">
           <div class="container">
-            <div class="header__wrap header__wrap--bottom"><a class="header__logo" href="#"><img class="logo" src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a>
-              <nav class="navbar header__navbar"><a class="link navbar__el" href="#">продукция</a><a class="link navbar__el" href="#">спецпредложения</a><a class="link navbar__el" href="#">о компании</a><a class="link navbar__el" href="#">реквизиты</a><a class="link navbar__el" href="#">партнеры</a><a class="link navbar__el" href="#">контакты</a></nav>
+            <div class="header__wrap header__wrap"><a class="header__logo" href="#"><img class="logo" src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a>
+              <nav class="navbar header__navbar"><a class="link navbar__el smooth-scroll" href="#products">продукция</a><a class="link navbar__el smooth-scroll" href="#special">спецпредложения</a><a class="link navbar__el smooth-scroll" href="#about">о компании</a><a class="link navbar__el smooth-scroll" href="#requisites">реквизиты</a><a class="link navbar__el smooth-scroll" href="#partners">партнеры</a><a class="link navbar__el smooth-scroll" href="#contacts">контакты</a></nav>
               <div class="header__btn-group">
-                <button class="btn btn--accent" type="button">сделать заявку</button>
-                <button class="btn btn--accent-2" type="button">заказать звонок</button>
+                <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
+                <button class="btn btn--accent-2 js-modal" type="button" data-modal-type="callback">заказать звонок</button>
               </div>
             </div>
           </div>
@@ -57,12 +57,12 @@
         </div>
         <div class="section section--title section--grey">
           <div class="container">
-            <h2 class="title">Продукция</h2>
+            <h2 class="title">Продукция</h2><span class="anchor" id="products"></span>
           </div>
         </div>
         <div class="section section--grey">
           <div class="container">
-            <div class="products">
+            <div class="products white-wrap">
               <div class="products__layout">
                 <div class="products__box products__box--left">
                   <nav class="products__nav js-products-nav">
@@ -209,8 +209,8 @@
                       </div>
                     </div>
                     <div class="products__content-actions">
-                      <button class="btn btn--accent" type="button">сделать заявку</button>
-                      <button class="btn btn--accent-2" type="button">заказать звонок</button>
+                      <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
+                      <button class="btn btn--accent-2 js-modal" type="button" data-modal-type="callback">заказать звонок</button>
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@
         </div>
         <div class="section section--title">
           <div class="container">
-            <h2 class="title">Спецпредложения</h2>
+            <h2 class="title">Спецпредложения</h2><span class="anchor" id="special"></span>
           </div>
         </div>
         <div class="section">
@@ -231,22 +231,22 @@
                   <div class="special-offers__slider-item">
                     <div class="e-img"><img src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg"></div>
                     <div class="e-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.</div>
-                    <button class="btn btn--accent" type="button">сделать заявку</button>
+                    <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
                   </div>
                   <div class="special-offers__slider-item">
                     <div class="e-img"><img src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg"></div>
                     <div class="e-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.</div>
-                    <button class="btn btn--accent" type="button">сделать заявку</button>
+                    <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
                   </div>
                   <div class="special-offers__slider-item">
                     <div class="e-img"><img src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg"></div>
                     <div class="e-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.</div>
-                    <button class="btn btn--accent" type="button">сделать заявку</button>
+                    <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
                   </div>
                   <div class="special-offers__slider-item">
                     <div class="e-img"><img src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg"></div>
                     <div class="e-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.</div>
-                    <button class="btn btn--accent" type="button">сделать заявку</button>
+                    <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
                   </div>
                 </div>
                 <div class="special-offers__actions">
@@ -259,19 +259,19 @@
         </div>
         <div class="section section--title section--grey">
           <div class="container">
-            <h2 class="title">О компании</h2>
+            <h2 class="title">О компании</h2><span class="anchor" id="about"></span>
           </div>
         </div>
         <div class="section section--grey">
           <div class="container">
-            <div class="about">
-              <div class="about__box">
+            <div class="about white-wrap">
+              <div class="box-wrap">
                 <div class="about__text">У нас Вы можете приобрести семена оптом по лучшим ценам. Мы обеспечим ваше хозяйство высококачественным семенным материалом любой разновидности. Все семена имеют необходимые документы и сертификаты. Так же поможем Вам приобрести фуражное зерно, грубые и сочные корма для животных.</div>
                 <div class="about__text">ООО «Альбион» выбирают многие фермеры Смоленской области, а так же сельскохозяйственные предприятия более чем в 15 регионах России.</div>
                 <div class="about__text">В ближайшие 10 лет компания нацелена на развитие и процветание. Планируется увеличение ассортимента продукции, расширение собственного автопарка для еще более удобной и оперативной доставки наших семян на ваши посевные площади. По многочисленным просьбам жителей Смоленского района планируется открытие розничных магазинов по реализации семян многолетних трав, злаковых, бобовых и зерно-бобовых смесей.</div>
                 <div class="about__text">Наши профессионалы работают для Вас! Мы всегда готовы оказать помощь в любом вопросе! Приобретайте у нас самые лучшие семена, пользуйтесь услугами наших водителей-профессионалов и вы не пожалеете!</div>
               </div>
-              <div class="about__advantages">
+              <div class="about__advantages box-wrap">
                 <div class="about__advantages-item">
                   <div class="e-icon"><i class="fas fa-dollar-sign"></i></div>
                   <div class="e-text">Обоснованная ценовая политика</div>
@@ -290,76 +290,78 @@
         </div>
         <div class="section section--title">
           <div class="container">
-            <h2 class="title">Реквизиты</h2>
+            <h2 class="title">Реквизиты</h2><span class="anchor" id="requisites"></span>
           </div>
         </div>
         <div class="section">
           <div class="container">
-            <div class="requisites">
-              <h3 class="requisites__title">Общество с ограниченной ответственностью «СМБ Групп»</h3>
-              <div class="requisites__block">
-                <div class="row">
-                  <div class="col">Наименование полное</div>
-                  <div class="col">Общество с ограниченной ответственностью «СМБ Групп»</div>
+            <div class="requisites white-wrap">
+              <div class="box-wrap">
+                <h3 class="requisites__title">Общество с ограниченной ответственностью «СМБ Групп»</h3>
+                <div class="requisites__block">
+                  <div class="row">
+                    <div class="col">Наименование полное</div>
+                    <div class="col">Общество с ограниченной ответственностью «СМБ Групп»</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Наименование сокращенное</div>
+                    <div class="col">ООО «СМБ Групп»</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Директор</div>
+                    <div class="col">Молтасов Иван Валерьевич (действующий на основании Устава)</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Юридический адрес</div>
+                    <div class="col">215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Почтовый адрес</div>
+                    <div class="col">215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Телефон</div>
+                    <div class="col"><a class="link" href="tel:+79269409939">+7 (926) 940-99-39</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Факс</div>
+                    <div class="col">+7 (926) 940-99-39</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">E-mail</div>
+                    <div class="col"><a class="link" href="mailto:Smb_67@mail.ru">Smb_67@mail.ru</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col">ИНН</div>
+                    <div class="col">6722033969</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">КПП</div>
+                    <div class="col">672201001</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">ОГРН</div>
+                    <div class="col">1196733006018</div>
+                  </div>
                 </div>
-                <div class="row">
-                  <div class="col">Наименование сокращенное</div>
-                  <div class="col">ООО «СМБ Групп»</div>
-                </div>
-                <div class="row">
-                  <div class="col">Директор</div>
-                  <div class="col">Молтасов Иван Валерьевич (действующий на основании Устава)</div>
-                </div>
-                <div class="row">
-                  <div class="col">Юридический адрес</div>
-                  <div class="col">215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14</div>
-                </div>
-                <div class="row">
-                  <div class="col">Почтовый адрес</div>
-                  <div class="col">215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14</div>
-                </div>
-                <div class="row">
-                  <div class="col">Телефон</div>
-                  <div class="col"><a class="link" href="tel:+79269409939">+7 (926) 940-99-39</a></div>
-                </div>
-                <div class="row">
-                  <div class="col">Факс</div>
-                  <div class="col">+7 (926) 940-99-39</div>
-                </div>
-                <div class="row">
-                  <div class="col">E-mail</div>
-                  <div class="col"><a class="link" href="mailto:Smb_67@mail.ru">Smb_67@mail.ru</a></div>
-                </div>
-                <div class="row">
-                  <div class="col">ИНН</div>
-                  <div class="col">6722033969</div>
-                </div>
-                <div class="row">
-                  <div class="col">КПП</div>
-                  <div class="col">672201001</div>
-                </div>
-                <div class="row">
-                  <div class="col">ОГРН</div>
-                  <div class="col">1196733006018</div>
-                </div>
-              </div>
-              <h3 class="requisites__title">Банковские реквизиты</h3>
-              <div class="requisites__block">
-                <div class="row">
-                  <div class="col">Расчетный счет</div>
-                  <div class="col">40702810110000511485</div>
-                </div>
-                <div class="row">
-                  <div class="col">Корреспондентский счет</div>
-                  <div class="col">30101810145250000974</div>
-                </div>
-                <div class="row">
-                  <div class="col">Банк</div>
-                  <div class="col">АО "ТИНЬКОФФ БАНК"</div>
-                </div>
-                <div class="row">
-                  <div class="col">БИК</div>
-                  <div class="col">044525974</div>
+                <h3 class="requisites__title">Банковские реквизиты</h3>
+                <div class="requisites__block">
+                  <div class="row">
+                    <div class="col">Расчетный счет</div>
+                    <div class="col">40702810110000511485</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Корреспондентский счет</div>
+                    <div class="col">30101810145250000974</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Банк</div>
+                    <div class="col">АО "ТИНЬКОФФ БАНК"</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">БИК</div>
+                    <div class="col">044525974</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -367,12 +369,12 @@
         </div>
         <div class="section section--title section--grey">
           <div class="container">
-            <h2 class="title">Партнеры</h2>
+            <h2 class="title">Партнеры</h2><span class="anchor" id="partners"></span>
           </div>
         </div>
         <div class="section section--grey">
           <div class="container">
-            <div class="partners">
+            <div class="partners white-wrap">
               <h4 class="partners__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae possimus, architecto eaque nulla doloremque repellat, ipsa magni accusantium perferendis modi et in! Maxime quas optio voluptates dolores praesentium dignissimos temporibus?</h4>
               <div class="partners__slider-wrap">
                 <div class="partners__slider js-partners-slider"><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a><a class="partners__slider-item" href="#"><img src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a></div>
@@ -382,19 +384,124 @@
         </div>
         <div class="section section--title">
           <div class="container">
-            <h2 class="title">Контакты</h2>
+            <h2 class="title">Контакты</h2><span class="anchor" id="contacts"></span>
           </div>
         </div>
         <div class="section">
           <div class="container">
-            <div class="contacts">
+            <div class="contacts white-wrap">
               <div class="contacts__layout">
-                <div class="contacts__map"></div>
-                <div class="contacts__descr"></div>
+                <div class="contacts__map">
+                  <div id="map"></div>
+                </div>
+                <div class="contacts__descr">
+                  <div class="contacts__item">
+                    <h5 class="title">Наш адрес</h5>
+                    <p class="text">214510, Смоленска область, Смоленский р-он, д. Богородицкое</p>
+                  </div>
+                  <div class="contacts__item">
+                    <h5 class="title">Контакты</h5>
+                    <p class="text"><b>Телефон:&nbsp;</b><a class="link" href="tel:+79269409939">+7 (926) 940-99-39</a></p>
+                    <p class="text"><b>Email:&nbsp;</b><a class="link" href="mailto:smb_67@mail.ru">smb_67@mail.ru</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner footer__inner--top">
+          <div class="container">
+            <div class="footer__wrap"><a class="footer__item footer__logo" href="#"><img class="logo" src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a>
+              <div class="footer__item footer__contacts">
+                <div class="footer__contact">
+                  <p class="text">214510, Смоленска область, Смоленский р-он, д. Богородицкое</p>
+                </div>
+                <div class="footer__contact">
+                  <p class="text"><a class="link" href="tel:+79269409939">+7 (926) 940-99-39</a></p>
+                </div>
+                <div class="footer__contact">
+                  <p class="text"><a class="link" href="mailto:smb_67@mail.ru">smb_67@mail.ru</a></p>
+                </div>
+              </div>
+              <div class="footer__item footer__btn-group">
+                <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
+                <button class="btn btn--accent-2 js-modal" type="button" data-modal-type="callback">заказать звонок</button>
+                <div class="footer__social social"><a class="social__item social__item--whatsup" href=""><i class="fab fa-whatsapp"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__inner footer__inner--bottom">
+          <div class="container">
+            <div class="footer__wrap">
+              <div class="footer__copy">
+                <p>&copy; СМБ Групп 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__inner footer__inner--underworld">
+          <div class="container">
+            <div class="footer__wrap"></div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal">
+        <div class="modal__container" data-type="write"><span class="modal__close">&times;</span>
+          <form class="form form--modal form--write">
+            <h2 class="title">Написать нам</h2>
+            <div class="form__group">
+              <div class="form__field">
+                <div class="form__input">
+                  <input class="input" type="text" placeholder="ФИО">
+                </div>
+              </div>
+              <div class="form__field">
+                <div class="form__input">
+                  <input class="input" type="text" placeholder="Телефон">
+                </div>
+              </div>
+              <div class="form__field">
+                <div class="form__input">
+                  <input class="input" type="text" placeholder="Электронная почта">
+                </div>
+              </div>
+              <div class="form__field">
+                <div class="form__textarea">
+                  <textarea class="textarea" placeholder="Текст сообщения"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form__actions">
+              <button class="btn btn--accent" type="button">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__container" data-type="callback"><span class="modal__close">&times;</span>
+          <form class="form form--modal form--write">
+            <h2 class="title">Обратный звонок</h2>
+            <div class="form__group">
+              <div class="form__field">
+                <div class="form__input">
+                  <input class="input" type="text" placeholder="ФИО">
+                </div>
+              </div>
+              <div class="form__field">
+                <div class="form__input">
+                  <input class="input" type="text" placeholder="Телефон">
+                </div>
+              </div>
+            </div>
+            <div class="form__actions">
+              <button class="btn btn--accent" type="button">Позвонить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="to-top">
+        <div class="to-top__circle"><i class="fas fa-chevron-up"></i></div>
       </div>
     </div>
     <script src="assets/js/libs.min.js" defer></script>

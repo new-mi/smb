@@ -1,0 +1,48 @@
+.footer
+  background: rgba($c_white, 0.95)
+  margin-top: 30px
+  &__inner
+    &--top
+      .footer__wrap
+        padding: 15px 10px
+    &--bottom
+      .footer__wrap
+        padding: 5px 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &--underworld
+      .footer__wrap
+        padding: 5px 0
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+  &__wrap
+      display: flex
+  &__item
+    display: flex
+    flex-direction: column
+    max-width: 300px
+    margin-right: 40px
+
+  &__btn-group
+    display: flex
+    flex-direction: column
+    & > *
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+
+  &__contact
+    margin-bottom: 15px
+
+  &__copy
+    font-size: 14px
+    opacity: 0.6
+
+  &__logo
+    .logo
+      height: 100px
+

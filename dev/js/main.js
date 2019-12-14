@@ -27,13 +27,27 @@ function init() {
 _b.style.paddingTop = $('.header')[0].offsetHeight + 'px'
 // BODY MARGIN TOP end
 
+// SMOOTH SCROLL
+$('.smooth-scroll').on('click', smoothScroll)
+function smoothScroll(e) {
+  if (this.hash !== "") {
+    e.preventDefault();
+    const hash = this.hash;
+    _b.scrollBy({
+      top: $(hash).offset().top,
+      behavior: "smooth"
+    });
+  }
+}
+// SMOOTH SCROLL end
+
 // HEADER SCROLLING
 let currentScroll = 0,
-    hTop = $('.header__wrap--top')[0].offsetHeight,
+    hTop = $('.header__inner--top .header__wrap')[0].offsetHeight,
     header = $(".header");
 
 if (_width > 992) {
-  $('.wrapper').on('scroll', handlerStickyHeader);
+  $(_b).on('scroll', handlerStickyHeader);
 }
 
 function handlerStickyHeader(e) {
@@ -41,16 +55,13 @@ function handlerStickyHeader(e) {
 
   if (currentScroll > hTop) {
     header.css('transform', `translateY(-${hTop}px)`)
-    _b.style.paddingTop = $('.header')[0].offsetHeight - hTop + 'px'
   }
   else {
     header.css('transform', `translateY(0px)`)
-    _b.style.paddingTop = $('.header')[0].offsetHeight + 'px'
   }
 
-  currentScroll = scroll;  //Updates current scroll position
+  currentScroll = scroll;
 }
-
 // HEADER SCROLLING end
 
 // MAIN SLIDER
@@ -86,6 +97,7 @@ const specialOffersSlider = $('.js-special-offers-slider');
 specialOffersSlider.slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  autoplay: true,
   infinity: false,
   arrows: true,
   dots: false,
@@ -105,5 +117,50 @@ partnersSlider.slick({
   autoplay: true
 })
 // PARTNERS SLIDER end
+
+// MODAL
+const modalClass = 'modal',
+      modalContainerClass = 'modal__container',
+      modal = $('.' + modalClass),
+      modalContainer = $('.' + modalContainerClass);
+
+$('.js-modal').on('click', handlerOpenModal);
+$('.modal__close').on('click', closeModal);
+
+function handlerOpenModal() {
+  const dest = $(this).attr('data-modal-type');
+  if (!dest) return;
+
+  openModal(dest);
+}
+
+function closeModal() {
+  modal.removeClass('isOpen'),
+  modalContainer.removeClass('isOpen')
+}
+
+function openModal(type) {
+  modal.addClass('isOpen');
+  $(`.${modalContainerClass}[data-type="${type}"]`).addClass('isOpen');
+}
+
+// MODAL end
+
+// TO-TOP
+const toTopEl = $('.to-top');
+toTopEl.hide();
+
+$(_b).scroll(function() {
+  if ($(_b).scrollTop() > 400) {
+      toTopEl.show();
+  } else {
+      toTopEl.hide();
+  }
+})
+
+toTopEl.on('click', function(){
+  $(_b).animate({scrollTop:0}, 500);
+});
+// TO-TOP end
 
 }

@@ -4,26 +4,22 @@
   left: 0
   width: 100%
   z-index: 10
-  transition: transform $trans
+  transition: transform $trans/2
   &__inner
     &--top
+      .header__wrap
+        padding: 10px
     &--bottom
       // box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1)
+      .header__wrap
+        padding: 10px
+        background: rgba($c_white, 0.99)
+        border-radius: 3px
+        box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1)
   &__wrap
       display: flex
       align-items: center
       padding: 5px 0
-      &--top
-        // background: $c_white
-        padding: 10px
-      &--bottom
-        padding: 10px
-        background: $c_white
-        border-radius: 3px
-        box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1)
-        // border-top: 1px solid $c_accent
-        // border-bottom: 1px solid $c_accent
-      //   flex-wrap: wrap
   &__contacts
     display: flex
     // flex-wrap: wrap

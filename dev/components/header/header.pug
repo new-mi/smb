@@ -1,7 +1,7 @@
 header.header
   .header__inner.header__inner--top
     .container
-      .header__wrap.header__wrap--top
+      .header__wrap.header__wrap
         .header__social.social
           a.social__item.social__item--whatsup(href="")
             <i class="fab fa-whatsapp"></i>
@@ -13,18 +13,18 @@ header.header
 
   .header__inner.header__inner--bottom
     .container
-      .header__wrap.header__wrap--bottom
+      .header__wrap.header__wrap
         a.header__logo(href="#")
           img.logo(src="https://logomaster.com.ua/logo/logo_agrilab0.gif")
         nav.navbar.header__navbar
-          a.link.navbar__el(href="#") продукция
-          a.link.navbar__el(href="#") спецпредложения
-          a.link.navbar__el(href="#") о компании
-          a.link.navbar__el(href="#") реквизиты
-          a.link.navbar__el(href="#") партнеры
-          a.link.navbar__el(href="#") контакты
+          a.link.navbar__el.smooth-scroll(href="#products") продукция
+          a.link.navbar__el.smooth-scroll(href="#special") спецпредложения
+          a.link.navbar__el.smooth-scroll(href="#about") о компании
+          a.link.navbar__el.smooth-scroll(href="#requisites") реквизиты
+          a.link.navbar__el.smooth-scroll(href="#partners") партнеры
+          a.link.navbar__el.smooth-scroll(href="#contacts") контакты
         .header__btn-group
-          button.btn.btn--accent(type="button") сделать заявку
-          button.btn.btn--accent-2(type="button") заказать звонок
+          button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
+          button.btn.btn--accent-2.js-modal(type="button" data-modal-type="callback") заказать звонок
 
 

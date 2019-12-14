@@ -24,10 +24,11 @@ block content
   .section.section--title.section--grey
     .container
       h2.title Продукция
+      span.anchor#products
 
   .section.section--grey
     .container
-      .products
+      .products.white-wrap
         .products__layout
           .products__box.products__box--left
             nav.products__nav.js-products-nav
@@ -171,11 +172,12 @@ block content
                 .products__content-item.hidden(data-id="4")
                   p.error Извините, данный раздел находится в стадии заполнения информацией
               .products__content-actions
-                button.btn.btn--accent(type="button") сделать заявку
-                button.btn.btn--accent-2(type="button") заказать звонок
+                button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
+                button.btn.btn--accent-2.js-modal(type="button" data-modal-type="callback") заказать звонок
   .section.section--title
     .container
       h2.title Спецпредложения
+      span.anchor#special
 
   .section
     .container
@@ -186,22 +188,22 @@ block content
               .e-img
                 img(src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg")
               .e-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.
-              button.btn.btn--accent(type="button") сделать заявку
+              button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
             .special-offers__slider-item
               .e-img
                 img(src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg")
               .e-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.
-              button.btn.btn--accent(type="button") сделать заявку
+              button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
             .special-offers__slider-item
               .e-img
                 img(src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg")
               .e-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.
-              button.btn.btn--accent(type="button") сделать заявку
+              button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
             .special-offers__slider-item
               .e-img
                 img(src="https://abekker.ru/uploads/content/content_kak-pravilno-sajat-semena.jpeg")
               .e-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam veniam repellendus autem, assumenda rem.
-              button.btn.btn--accent(type="button") сделать заявку
+              button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
 
           .special-offers__actions
             .special-offers__nav.special-offers__nav--prev
@@ -212,16 +214,17 @@ block content
   .section.section--title.section--grey
     .container
       h2.title О компании
+      span.anchor#about
 
   .section.section--grey
     .container
-      .about
-        .about__box
+      .about.white-wrap
+        .box-wrap
           .about__text У нас Вы можете приобрести семена оптом по лучшим ценам. Мы обеспечим ваше хозяйство высококачественным семенным материалом любой разновидности. Все семена имеют необходимые документы и сертификаты. Так же поможем Вам приобрести фуражное зерно, грубые и сочные корма для животных.
           .about__text ООО «Альбион» выбирают многие фермеры Смоленской области, а так же сельскохозяйственные предприятия более чем в 15 регионах России.
           .about__text В ближайшие 10 лет компания нацелена на развитие и процветание. Планируется увеличение ассортимента продукции, расширение собственного автопарка для еще более удобной и оперативной доставки наших семян на ваши посевные площади. По многочисленным просьбам жителей Смоленского района планируется открытие розничных магазинов по реализации семян многолетних трав, злаковых, бобовых и зерно-бобовых смесей.
           .about__text Наши профессионалы работают для Вас! Мы всегда готовы оказать помощь в любом вопросе! Приобретайте у нас самые лучшие семена, пользуйтесь услугами наших водителей-профессионалов и вы не пожалеете!
-        .about__advantages
+        .about__advantages.box-wrap
           .about__advantages-item
             .e-icon
               i.fas.fa-dollar-sign
@@ -238,70 +241,73 @@ block content
   .section.section--title
     .container
       h2.title Реквизиты
+      span.anchor#requisites
 
   .section
     .container
-      .requisites
-        h3.requisites__title Общество с ограниченной ответственностью «СМБ Групп»
-        .requisites__block
-          .row
-            .col Наименование полное
-            .col Общество с ограниченной ответственностью «СМБ Групп»
-          .row
-            .col Наименование сокращенное
-            .col ООО «СМБ Групп»
-          .row
-            .col Директор
-            .col Молтасов Иван Валерьевич (действующий на основании Устава)
-          .row
-            .col Юридический адрес
-            .col 215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14
-          .row
-            .col Почтовый адрес
-            .col 215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14
-          .row
-            .col Телефон
-            .col
-              a.link(href="tel:+79269409939") +7 (926) 940-99-39
-          .row
-            .col Факс
-            .col +7 (926) 940-99-39
-          .row
-            .col E-mail
-            .col
-              a.link(href="mailto:Smb_67@mail.ru") Smb_67@mail.ru
-          .row
-            .col ИНН
-            .col 6722033969
-          .row
-            .col КПП
-            .col 672201001
-          .row
-            .col ОГРН
-            .col 1196733006018
+      .requisites.white-wrap
+        .box-wrap
+          h3.requisites__title Общество с ограниченной ответственностью «СМБ Групп»
+          .requisites__block
+            .row
+              .col Наименование полное
+              .col Общество с ограниченной ответственностью «СМБ Групп»
+            .row
+              .col Наименование сокращенное
+              .col ООО «СМБ Групп»
+            .row
+              .col Директор
+              .col Молтасов Иван Валерьевич (действующий на основании Устава)
+            .row
+              .col Юридический адрес
+              .col 215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14
+            .row
+              .col Почтовый адрес
+              .col 215010, Смоленская область, г. Гагарин, ул. Мичурина д. 7, пом. 14
+            .row
+              .col Телефон
+              .col
+                a.link(href="tel:+79269409939") +7 (926) 940-99-39
+            .row
+              .col Факс
+              .col +7 (926) 940-99-39
+            .row
+              .col E-mail
+              .col
+                a.link(href="mailto:Smb_67@mail.ru") Smb_67@mail.ru
+            .row
+              .col ИНН
+              .col 6722033969
+            .row
+              .col КПП
+              .col 672201001
+            .row
+              .col ОГРН
+              .col 1196733006018
 
-        h3.requisites__title Банковские реквизиты
-        .requisites__block
-          .row
-            .col Расчетный счет
-            .col 40702810110000511485
-          .row
-            .col Корреспондентский счет
-            .col 30101810145250000974
-          .row
-            .col Банк
-            .col АО "ТИНЬКОФФ БАНК"
-          .row
-            .col БИК
-            .col 044525974
+          h3.requisites__title Банковские реквизиты
+          .requisites__block
+            .row
+              .col Расчетный счет
+              .col 40702810110000511485
+            .row
+              .col Корреспондентский счет
+              .col 30101810145250000974
+            .row
+              .col Банк
+              .col АО "ТИНЬКОФФ БАНК"
+            .row
+              .col БИК
+              .col 044525974
 
   .section.section--title.section--grey
     .container
       h2.title Партнеры
+      span.anchor#partners
 
   .section.section--grey
     .container
-      .partners
+      .partners.white-wrap
         h4.partners__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae possimus, architecto eaque nulla doloremque repellat, ipsa magni accusantium perferendis modi et in! Maxime quas optio voluptates dolores praesentium dignissimos temporibus?
         .partners__slider-wrap
           .partners__slider.js-partners-slider
@@ -323,10 +329,23 @@ block content
   .section.section--title
     .container
       h2.title Контакты
+      span.anchor#contacts
 
   .section
     .container
-      .contacts
+      .contacts.white-wrap
         .contacts__layout
           .contacts__map
+            #map
           .contacts__descr
+            .contacts__item
+              h5.title Наш адрес
+              p.text 214510, Смоленска область, Смоленский р-он, д. Богородицкое
+            .contacts__item
+              h5.title Контакты
+              p.text
+                b Телефон:&nbsp;
+                a.link(href="tel:+79269409939") +7 (926) 940-99-39
+              p.text
+                b Email:&nbsp;
+                a.link(href="mailto:smb_67@mail.ru") smb_67@mail.ru

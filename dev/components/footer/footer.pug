@@ -1,0 +1,74 @@
+footer.footer
+  .footer__inner.footer__inner--top
+    .container
+      .footer__wrap
+        a.footer__item.footer__logo(href="#")
+          img.logo(src="https://logomaster.com.ua/logo/logo_agrilab0.gif")
+        .footer__item.footer__contacts
+          .footer__contact
+            p.text 214510, Смоленска область, Смоленский р-он, д. Богородицкое
+          .footer__contact
+            p.text
+              a.link(href="tel:+79269409939") +7 (926) 940-99-39
+          .footer__contact
+            p.text
+              a.link(href="mailto:smb_67@mail.ru") smb_67@mail.ru
+        .footer__item.footer__btn-group
+          button.btn.btn--accent.js-modal(type="button" data-modal-type="write") сделать заявку
+          button.btn.btn--accent-2.js-modal(type="button" data-modal-type="callback") заказать звонок
+          .footer__social.social
+            a.social__item.social__item--whatsup(href="")
+              <i class="fab fa-whatsapp"></i>
+
+  .footer__inner.footer__inner--bottom
+    .container
+      .footer__wrap
+        .footer__copy
+          p &copy; СМБ Групп 2020
+
+  .footer__inner.footer__inner--underworld
+    .container
+      .footer__wrap
+
+
+.modal
+  .modal__container(data-type="write")
+    span.modal__close &times;
+    form.form.form--modal.form--write
+      h2.title Написать нам
+      .form__group
+        .form__field
+          .form__input
+            input.input(type="text" placeholder="ФИО")
+        .form__field
+          .form__input
+            input.input(type="text" placeholder="Телефон")
+        .form__field
+          .form__input
+            input.input(type="text" placeholder="Электронная почта")
+        .form__field
+          .form__textarea
+            textarea.textarea(placeholder="Текст сообщения")
+      .form__actions
+        button.btn.btn--accent(type="button") Отправить
+  .modal__container(data-type="callback")
+    span.modal__close &times;
+    form.form.form--modal.form--write
+      h2.title Обратный звонок
+      .form__group
+        .form__field
+          .form__input
+            input.input(type="text" placeholder="ФИО")
+        .form__field
+          .form__input
+            input.input(type="text" placeholder="Телефон")
+      .form__actions
+        button.btn.btn--accent(type="button") Позвонить
+
+
+.to-top
+  .to-top__circle
+    i.fas.fa-chevron-up
+
+
+
