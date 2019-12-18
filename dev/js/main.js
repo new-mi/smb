@@ -2,22 +2,18 @@
   -- jQuery
 ------DEPENDENCES end */
 
-/*
-  Если нужно, чтобы клики вызывали фокус для кнопок, нужно как можно раньше добавить этот JavaScript
-  Когда вы удерживаете левую кнопку мыши: оба состояния :active и :focus вызываются только в Chrome.
-  Состояние :focus совсем не вызывается в Safari и Firefox (Mac)
-*/
-document.addEventListener('click', function (event) {
-  if (event.target.matches('button')) {
-    event.target.focus();
-  }
-});
 
 const _w = window,
       _d = document,
       _b = _d.body,
       _width = $(_w).width(),
-      _height = $(_w).height();
+      _height = $(_w).height(),
+      _breakpoint = {
+        tablet: 992,
+        mobile: 768
+      },
+      _toTop = 400,
+      _toTopAnimate = 500;
 
 _w.onload = init();
 
@@ -45,10 +41,6 @@ function smoothScroll(e) {
 let currentScroll = 0,
     hTop = $('.header__inner--top .header__wrap')[0].offsetHeight,
     header = $(".header");
-
-if (_width > 992) {
-  $(_b).on('scroll', handlerStickyHeader);
-}
 
 function handlerStickyHeader(e) {
   let scroll = $(this).scrollTop();
@@ -88,6 +80,13 @@ function handlerClickProduct(e) {
 
   $('.js-products-content > .products__content-item').addClass('hidden')
   $(`.products__content-item[data-id="${attrId}"]`).removeClass('hidden')
+
+  if (_width < _breakpoint.mobile) {
+    _b.scrollBy({
+      top: $(`.products__content-item[data-id="${attrId}"]`).offset().top - 160,
+      behavior: "smooth"
+    });
+  }
 }
 // PRODUCTS end
 
@@ -102,7 +101,21 @@ specialOffersSlider.slick({
   arrows: true,
   dots: false,
   prevArrow: $('.special-offers__nav--prev'),
-  nextArrow: $('.special-offers__nav--next')
+  nextArrow: $('.special-offers__nav--next'),
+  responsive: [
+    {
+      breakpoint: _breakpoint.tablet,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: _breakpoint.mobile,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 })
 // SPECIAL OFFERS SLIDER end
 
@@ -114,7 +127,15 @@ partnersSlider.slick({
   infinity: true,
   arrows: false,
   dots: false,
-  autoplay: true
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: _breakpoint.tablet,
+      settings: {
+        slidesToShow: 3
+      }
+    }
+  ]
 })
 // PARTNERS SLIDER end
 
@@ -142,6 +163,7 @@ function closeModal() {
 function openModal(type) {
   modal.addClass('isOpen');
   $(`.${modalContainerClass}[data-type="${type}"]`).addClass('isOpen');
+  closeMenu()
 }
 
 // MODAL end
@@ -151,7 +173,7 @@ const toTopEl = $('.to-top');
 toTopEl.hide();
 
 $(_b).scroll(function() {
-  if ($(_b).scrollTop() > 400) {
+  if ($(_b).scrollTop() > _toTop) {
       toTopEl.show();
   } else {
       toTopEl.hide();
@@ -159,8 +181,41 @@ $(_b).scroll(function() {
 })
 
 toTopEl.on('click', function(){
-  $(_b).animate({scrollTop:0}, 500);
+  $(_b).animate({scrollTop:0}, _toTopAnimate);
 });
 // TO-TOP end
 
+
+
+
+// MOBILE
+const headerWrapMobile = $('.header__wrap-mobile')
+
+$('.js-open-menu').on('click', handlerOpenMenu);
+
+function handlerOpenMenu() {
+  if (header.hasClass('isOpen')) {
+    closeMenu()
+  } else {
+    header.addClass('isOpen')
+    headerWrapMobile.slideDown()
+  }
+}
+
+function closeMenu() {
+  header.removeClass('isOpen')
+  headerWrapMobile.slideUp()
+}
+// MOBILE end
+
+
+if (_width > _breakpoint.mobile) {
+  $(_b).on('scroll', handlerStickyHeader);
+}
+
+if (_width < _breakpoint.mobile) {
+  closeMenu()
+
+  $('.smooth-scroll').on('click', closeMenu)
+}
 }

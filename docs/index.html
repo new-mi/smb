@@ -5,7 +5,7 @@
     <title>Главная страница</title>
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css">
@@ -19,19 +19,22 @@
       <header class="header">
         <div class="header__inner header__inner--top">
           <div class="container">
-            <div class="header__wrap header__wrap">
+            <div class="header__wrap header__wrap header__wrap--top">
               <div class="header__social social"><a class="social__item social__item--whatsup" href=""><i class="fab fa-whatsapp"></i></a></div>
               <div class="header__contacts"><a class="link header__mail" href="mailto:smb_67@mail.ru">smb_67@mail.ru</a><a class="link header__phone" href="tel:+79269409939">+7 (926) 940-99-39</a></div>
             </div>
-          </div>
-        </div>
-        <div class="header__inner header__inner--bottom">
-          <div class="container">
-            <div class="header__wrap header__wrap"><a class="header__logo" href="#"><img class="logo" src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a>
-              <nav class="navbar header__navbar"><a class="link navbar__el smooth-scroll" href="#products">продукция</a><a class="link navbar__el smooth-scroll" href="#special">спецпредложения</a><a class="link navbar__el smooth-scroll" href="#about">о компании</a><a class="link navbar__el smooth-scroll" href="#requisites">реквизиты</a><a class="link navbar__el smooth-scroll" href="#partners">партнеры</a><a class="link navbar__el smooth-scroll" href="#contacts">контакты</a></nav>
-              <div class="header__btn-group">
-                <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
-                <button class="btn btn--accent-2 js-modal" type="button" data-modal-type="callback">заказать звонок</button>
+            <div class="header__wrap header__wrap header__wrap--bottom"><a class="header__logo" href="#"><img class="logo" src="https://logomaster.com.ua/logo/logo_agrilab0.gif"></a>
+              <div class="header__wrap-mobile">
+                <div class="header__navbar">
+                  <nav class="navbar"><a class="link navbar__el smooth-scroll" href="#products">продукция</a><a class="link navbar__el smooth-scroll" href="#special">спецпредложения</a><a class="link navbar__el smooth-scroll" href="#about">о компании</a><a class="link navbar__el smooth-scroll" href="#requisites">реквизиты</a><a class="link navbar__el smooth-scroll" href="#partners">партнеры</a><a class="link navbar__el smooth-scroll" href="#contacts">контакты</a></nav>
+                </div>
+                <div class="header__btn-group">
+                  <button class="btn btn--accent js-modal" type="button" data-modal-type="write">сделать заявку</button>
+                  <button class="btn btn--accent-2 js-modal" type="button" data-modal-type="callback">заказать звонок</button>
+                </div>
+              </div>
+              <div class="header__hb">
+                <div class="hb js-open-menu"><i class="hb__bars fas fa-bars"></i><i class="hb__close fas fa-times"></i></div>
               </div>
             </div>
           </div>
@@ -449,7 +452,7 @@
         </div>
       </footer>
       <div class="modal">
-        <div class="modal__container" data-type="write"><span class="modal__close">&times;</span>
+        <div class="modal__container" data-type="write"><span class="modal__close"><i class="fas fa-times"></i></span>
           <form class="form form--modal form--write">
             <h2 class="title">Написать нам</h2>
             <div class="form__group">
@@ -479,7 +482,7 @@
             </div>
           </form>
         </div>
-        <div class="modal__container" data-type="callback"><span class="modal__close">&times;</span>
+        <div class="modal__container" data-type="callback"><span class="modal__close"><i class="fas fa-times"></i></span>
           <form class="form form--modal form--write">
             <h2 class="title">Обратный звонок</h2>
             <div class="form__group">

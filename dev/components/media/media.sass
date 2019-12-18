@@ -1,4 +1,4 @@
-@media (min-width: 992px)
+@media (min-width: 768px)
   .link
     transition: $trans
     &:hover
@@ -35,3 +35,244 @@
         transition: $trans
         &:hover
           filter: grayscale(0)
+
+
+@media (max-width: 768px)
+  html
+    font-size: 16px
+    line-height: 1.3
+
+  .section
+    padding: 10px 0
+    &--first
+      padding-top: 0
+
+  .white-wrap
+    padding: 15px
+
+  // header
+  .header
+    background: $c_white
+    padding-top: 60px
+    &__hb
+      position: absolute
+      top: 10px
+      right: 15px
+      display: block
+      margin-left: auto
+    .container
+      display: flex
+      flex-direction: column
+    &__wrap
+      background: $c_white
+      &--top
+        order: 1
+        padding: 5px 0
+        border-top: 1px solid $c_grey
+        box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1)
+      &--bottom
+        box-shadow: none
+        padding: 0
+    &__wrap-mobile
+      position: absolute
+      left: 0
+      top: 94px
+      padding: 15px 0
+      flex-direction: column
+      background: $c_white
+      border-top: 1px solid $c_grey
+      box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1)
+    &__btn-group
+      margin: 0
+      padding: 15px 0 0
+    &__logo
+      position: absolute
+      top: 0
+      left: 15px
+      .logo
+        height: 60px
+    &__contacts
+      width: 100%
+      justify-content: space-between
+    &__phone,
+    &__mail
+      font-size: 1.125rem
+      color: $c_text
+      text-shadow: none
+      margin: 0
+    &__social
+      position: absolute
+      top: 30px
+      right: 70px
+      transform: translateY(-50%)
+      margin: 0
+
+    &.isOpen
+      .hb
+        &__close
+          display: flex
+        &__bars
+          display: none
+
+  // navbars
+  .navbar
+    flex-wrap: wrap
+    justify-content: center
+    &__el
+      width: 100%
+      justify-content: center
+      margin: 0
+      padding: 10px 0
+      margin-left: 0 !important
+      font-weight: bold
+      &:first-child
+        margin-top: 0
+
+  // main-slider
+  .main-slider
+    width: calc(100% + 30px)
+    margin: 0 -15px
+    &__slider
+      height: 300px
+    &__box
+      top: auto
+      bottom: 0
+      left: 0
+      transform: none
+      width: 100%
+      max-width: 100%
+      border-radius: 0
+      font-size: 1rem
+      padding: 10px
+      text-align: center
+      font-weight: bold
+
+  // products
+  .products
+    &__layout
+      flex-wrap: wrap
+    &__box
+      width: 100%
+      padding: 0
+    &__nav
+      &-item
+        padding: 10px
+        margin: 3px 0
+        .text
+          font-size: 24px
+    &__content
+      padding-top: 30px
+      &-body
+        overflow-x: scroll
+        -webkit-overflow-scrolling: touch
+    &__table
+      td
+        padding: 5px
+
+  // special-offers
+  .special-offers
+    .slick-slide,
+    .slick-list
+      margin: 0
+    &__nav
+      &--prev
+        left: 0
+      &--next
+        right: 0
+    &__slider-wrap
+      padding: 0 50px
+    &__slider
+      &-item
+        padding: 10px
+        .e-text
+          font-size: 1rem
+
+  // about
+  .about
+    &__text
+      margin-bottom: 10px
+      font-size: 1.125rem
+    &__advantages
+      flex-wrap: wrap
+      justify-content: stretch
+      &-item
+        max-width: 100%
+        width: 100%
+        flex-direction: row
+        align-items: center
+        text-align: left
+        padding: 10px 0
+        i
+          font-size: 3rem
+        .e-icon
+          flex-shrink: 0
+          width: 60px
+          margin: 0 10px 0 0
+          display: flex
+          justify-content: center
+          align-items: center
+        .e-text
+          font-size: 1.125rem
+
+  // requisites
+  .requisites
+    &__title
+      font-size: 1.25rem
+    &__block
+      .row
+        flex-wrap: wrap
+        .col
+          padding: 10px
+          width: 100% !important
+          &:first-child
+            border-right-color: rgba($c_accent, 0.4)
+            background: rgba($c_accent, 0.4)
+          &:nth-child(2)
+            border-top: none
+
+  // partners
+  .partners
+    &__text
+      font-size: 1.125rem
+    &__slider
+      margin: 15px 0 0
+
+
+  // contacts
+  .contacts
+    &__layout
+      flex-wrap: wrap
+    &__map
+      width: 100%
+      min-height: auto
+      height: 200px
+      margin-bottom: 10px
+    &__descr
+      width: 100%
+      padding: 0
+    &__item
+      .title
+        font-size: 1.25rem
+      .text
+        font-size: 1.125rem
+
+  //footer
+  .footer
+    &__wrap
+      flex-wrap: wrap
+    &__item
+      width: 100%
+      margin: 0 0 10px
+      max-width: 100%
+    &__logo
+      width: auto
+      margin: 0 auto 10px
+    &__contact
+      font-size: 1.125rem
+
+  // modal
+  .modal
+    &__container
+      padding: 30px 15px
+      max-width: 100%
+
