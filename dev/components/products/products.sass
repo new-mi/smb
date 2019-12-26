@@ -82,4 +82,51 @@
       td
         font-weight: bold
 
+  &__card-group
+    display: flex
+    flex-wrap: wrap
+    background: $c_white
+    margin-bottom: 15px
+    border-radius: 5px
+    box-shadow: 0 0 10px 3px rgba($c_grey, 0.6)
+    &:last-child
+      margin-bottom: 0
+
+  &__card-group-title
+    background: rgba($c_accent-2, 0.3)
+    width: 100%
+    text-align: center
+    padding: 5px 10px
+    font-size: 1.25rem
+    font-weight: bold
+  &__card
+    width: 50%
+    display: flex
+    flex-direction: column
+    padding: 15px
+    border-bottom: 1px solid $c_grey
+    &:nth-child(even)
+      border-right: 1px solid $c_grey
+      border-left: 1px solid $c_grey
+    &:nth-child(odd)
+      border-right: 1px solid $c_grey
+    &--fluid
+      width: 100%
+
+    .title
+      font-size: 1.125rem
+      margin-bottom: 10px
+      font-weight: bold
+    .tags
+      display: flex
+      flex-wrap: wrap
+    .tag
+      flex-shrink: 0
+      margin: 0 10px 10px 0
+      padding: 5px 10px
+      background: rgba($c_grey-light, 0.8)
+      border: 1px solid rgba($c_grey-light, 0.8)
+      border-radius: 3px
+      font-size: 0.875rem
+
 

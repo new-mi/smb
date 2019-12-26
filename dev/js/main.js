@@ -163,7 +163,7 @@ function closeModal() {
 function openModal(type) {
   modal.addClass('isOpen');
   $(`.${modalContainerClass}[data-type="${type}"]`).addClass('isOpen');
-  closeMenu()
+  if (_width < _breakpoint.mobile) closeMenu()
 }
 
 // MODAL end
@@ -191,7 +191,9 @@ toTopEl.on('click', function(){
 // MOBILE
 const headerWrapMobile = $('.header__wrap-mobile')
 
-$('.js-open-menu').on('click', handlerOpenMenu);
+if (_width < _breakpoint.mobile) {
+  $('.js-open-menu').on('click', handlerOpenMenu);
+}
 
 function handlerOpenMenu() {
   if (header.hasClass('isOpen')) {
