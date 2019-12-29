@@ -89,6 +89,7 @@
     margin-bottom: 15px
     border-radius: 5px
     box-shadow: 0 0 10px 3px rgba($c_grey, 0.6)
+    overflow: hidden
     &:last-child
       margin-bottom: 0
 
@@ -128,5 +129,20 @@
       border: 1px solid rgba($c_grey-light, 0.8)
       border-radius: 3px
       font-size: 0.875rem
+
+  &__pricelist
+    display: flex
+    flex-wrap: wrap
+    padding: 0 0 10px
+    border-bottom: 1px solid rgba($c_text, 0.1)
+    &-item
+      padding: 0 15px 0 0
+      margin-bottom: 5px
+      display: flex
+      align-items: center
+      .icon
+        font-size: 24px
+        color: $c_accent
+        margin-right: 10px
 
 
