@@ -166,6 +166,21 @@ function openModal(type) {
   if (_width < _breakpoint.mobile) closeMenu()
 }
 
+$(document).on('click', clcikHandlerModalOverlay)
+$(document).on('keyup', clcikHandlerModalEsc)
+
+function clcikHandlerModalEsc(evt) {
+  if (evt.keyCode === 27) {
+    closeModal()
+  }
+}
+
+function clcikHandlerModalOverlay(evt) {
+  evt.stopPropagation()
+  if (evt.target === $('.modal')[0]) {
+    closeModal()
+  }
+}
 // MODAL end
 
 // TO-TOP
